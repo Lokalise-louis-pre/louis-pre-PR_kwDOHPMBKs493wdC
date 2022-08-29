@@ -1,0 +1,19 @@
+#root .os-theme-dark button[class^='tabbutton'] {
+    color: var(--sb-theme-color-black);
+}
+
+#root .os-theme-dark button[class^='tabbutton']:hover,
+#root .os-theme-dark button[class^='tabbutton']:focus {
+    border-bottom-color: var(--sb-theme-color-black);
+}
+
+/** 
+ * Workaround to set a text title for the storybook/addons/backgrounds button,
+ * as the standard toolbar configuration option doesn't work in this case
+*/
+button[title='Change the background of the preview'] > svg {
+    display: none;
+}
+button[title='Change the background of the preview']:after {
+    content: 'Theme switcher';
+}
